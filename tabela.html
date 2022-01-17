@@ -47,6 +47,17 @@
             text-decoration: none;
         }
 
+        @font-face {
+                font-family: "Lobster";
+                src: url(/fonts/lobster.otf) format('otf'), local('Lobster');
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            h1 {
+                font-family: "Lobster", cursive;
+            }
+
         @media print {
             * {
                 color: #000 !important;
@@ -84,6 +95,8 @@
             .profit::after {
                 content: " - Receita";
             }
+
+            
         }
     </style>
 </head>
