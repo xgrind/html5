@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- <style>
         section {
             border: 1px solid #000;
             height: 100px;
@@ -53,6 +54,7 @@
             padding: 10px;
             position: relative;
             width: 300px;
+            box-shadow: 3px 3px 3px #AAA;
         }
 
         .help::before {
@@ -93,6 +95,18 @@
             display: none;
         }
 
+        input {
+            border: 1px solid #999;
+            box-shadow: 2px 2px 2px rgba(0,0,0, 0.25) inset;
+            padding: 2px 5px;
+        }
+
+        input:focus {
+            border-color: #35861B;
+            box-shadow: 0 0 5px #35861B, 2px 2px 2px rgba(0,0,0,0.25) inset;
+            outline: none;
+        }
+
         @media print {
             * {
                 background: transparent !important;
@@ -126,13 +140,164 @@
             p {
                 page-break-inside: avoid;
             }
+
+            
             
         }
+
+        .nav {
+            background-color: #B9522D;
+            height: 30px;
+            list-style: none;
+            padding: 0;
+            width: 210px;
+        }
+
+        .nav li {
+            float: left;
+            font-weight: bold;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 70px;
+        }
+
+        .nav a {
+            color: white;
+        }
+
+        .nav .current {
+            background-color: #A64A28;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+
         
+    </style> -->
+
+    <style>
+        /* h1 {
+            background-color: #1D9AC0;
+            color: #fff;
+            padding: 10px;
+            text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .status {
+            color: white;
+            display: inline-block;
+            font-weight: bold;            
+            padding: 7px 10px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0 ,0.7);
+        }
+        .failed {
+            background-color: #BD2C00;
+        }
+        .shipped {
+            background-color: #6CC644;
+        }
+        .processing {
+            background-color: #FC9800;
+        } */
+
+        h1 {
+            color: #BD2C00;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        .available {
+            background-color: #6CC644;
+            border-radius: 3px;
+            color: white;
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 3px 7px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        ul {
+            background-color: #56B4EF;
+            background-image: linear-gradient(top, #56B4EF, #148EDA);
+            float: left;
+            list-style: none;
+            margin: 10px 10px 0 0;
+            padding: 0;
+            width: 230px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        @font-face {
+            font-family: 'IconicFill';
+            src: url('fonts/iconic_fill.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icon::before {
+            font-family: 'IconicFill';
+            margin: 0px 5px;
+        }
+
+        .paper::before {
+            content: "\e00b";
+        }
+
+        .digital::before {
+            content: "\e044";
+        }
+
+        .package::before {
+            content: "\e022";
+        }
+
+        .icon {
+            color: #FFF;
+            display: block;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 5px;
+            text-decoration: none;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }        
+
+        .icon.paper {
+            border-top: none;
+        }
+
+        .icon.package {
+            border-bottom: none;
+        }
+
+        .icon:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .book {
+            background-color: #FAFAFA;
+            background-image: linear-gradient(#FAFAFA, #EEE);
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            padding: 10px;
+            width: 600px;
+        }
+
+        .clear {
+            clear: both;
+        }
     </style>
 </head>
+
 <body>
-    <section>
+    <!-- <section>
         <h1>Um exemplo de pseudo elementos</h1>
     </section>
 
@@ -150,6 +315,55 @@
         confirmar a sua veracidade.
     </blockquote>
 
-    <a href="ubuntu.com">Ubuntu</a>
+    <a href="ubuntu.com">Ubuntu</a> <br><br>
+
+    Faça a sua pesquisa: <input type="text">
+
+    <hr>
+
+    <ul class='nav'>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+    </ul>
+
+    <hr> -->
+    <!-- <h1>HTML & CSS</h1>
+
+    <span class='status failed'>Pagamento recusado</span>
+    <span class='status shipped'>Produto enviado</span>
+    <span class='status processing'>Em aprovação</span> -->
+
+    <article class="book">
+        <header>
+            <h1>Ruby on Rails: coloque sua aplicação web nos trilhos</h1>
+            <h2>Vinicius Baggio</h2>
+            <span class="available">Disponível</span>
+            
+        </header>
+
+        <ul>
+            <li><a href="#" class='icon paper'>Comprar a versão física</a></li>
+            <li><a href="#" class='icon digital'>Comprar a versão digital</a></li>
+            <li><a href="#" class='icon package'>Comprar o pacote completo!</a></li>
+        </ul>
+
+        <!-- <div class="clear"></div> -->
+
+        <p>
+            Uma ótima leitura para iniciantes afim de se aventurar no ecossistema
+            de Ruby.
+        </p>
+
+        <div class="clear"></div>
+
+    </article>
+
+
+
+
+
+
 </body>
+
 </html>
