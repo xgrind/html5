@@ -77,6 +77,15 @@
             font-weight: normal;
         }
 
+        .no-placeholder input {
+            border-radius: 3px;
+            border-top: 1px solid #999;
+        }
+
+        .no-placeholder label {
+            display: block;
+        }
+
         button {
             margin-top: 5px;
         }
@@ -115,6 +124,19 @@
         
         <button>Entrar no site</button>
     </form>
+
+    <script>
+        $(() => {
+            function supportsPlaceholder() {
+                return 'placeholder' in document.createElement('input') &&
+                        'placeholder' in document.createElement('textarea');
+            }
+
+            if (!supportsPlaceholder()) {
+                $('html').addClass('no-placeholder');
+            }
+        });
+    </script>
 
   
 </body>
