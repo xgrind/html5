@@ -15,6 +15,14 @@
             transform-origin: 50% 50%;
         }
 
+        .loading {
+            animation: pulse 1.5s infinite;
+            background-color: #666;
+            border-radius: 50%;
+            font: 0/0 serif;
+            position: absolute;
+        }
+
         @keyframes appear {
             0% {
                 opacity: 0;
@@ -30,10 +38,30 @@
                 transform: scale(1.2);
             }
         }
+
+        @keyframes pulse {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+                top: 50px;
+                left: 50px;
+            }
+
+            100% {
+                width: 30px;
+                height: 30px;
+                opacity: 0;
+                top: 35px;
+                left: 35px;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Bem vindo!</h1>
+
+    <span class="loading" title="Carregando...">Carregando...</span>
     
 </body>
 </html>
